@@ -38,8 +38,6 @@ def square(start, end):
 def circle(start, end):
     "Draw circle from start to end."
     up()
-<<<<<<< HEAD
-    radio=end.x-start.x
     goto(start.x, start.y)
     down()
     begin_fill()
@@ -47,13 +45,6 @@ def circle(start, end):
         forward(end.x - start.x)
         left(45)
         left(50)
-=======
-    goto(start.x, start.y)
-    forward(end.x - start.x)
-    down()
-    turtle.circle(end.x - start.x)
-    begin_fill()
->>>>>>> origin/AlexJuarez
     end_fill()
 
 def rectangle(start, end):
@@ -79,12 +70,6 @@ def equilateral_triangle(start, end):
     goto(start.x, start.y)
     down()
     begin_fill()
-<<<<<<< HEAD
-    for count in range(2):
-        forward(end.x - start.x)
-        left(120)
-    end_fill()
-=======
 
     for count in range(3):
         forward(end.x - start.x)
@@ -92,7 +77,6 @@ def equilateral_triangle(start, end):
     
     end_fill()
 
->>>>>>> origin/AlexJuarez
 
 def tap(x, y):
     "Store starting point or draw shape."
