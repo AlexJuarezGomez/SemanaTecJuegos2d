@@ -20,6 +20,7 @@ def line(start, end):
     down()
     goto(end.x, end.y)
 
+
 def square(start, end):
     "Draw square from start to end."
     up()
@@ -33,9 +34,11 @@ def square(start, end):
 
     end_fill()
 
+
 def circle(start, end):
     "Draw circle from start to end."
     up()
+<<<<<<< HEAD
     radio=end.x-start.x
     goto(start.x, start.y)
     down()
@@ -44,22 +47,52 @@ def circle(start, end):
         forward(end.x - start.x)
         left(45)
         left(50)
+=======
+    goto(start.x, start.y)
+    forward(end.x - start.x)
+    down()
+    turtle.circle(end.x - start.x)
+    begin_fill()
+>>>>>>> origin/AlexJuarez
     end_fill()
 
 def rectangle(start, end):
     "Draw rectangle from start to end."
-    pass  # TODO
+    up()
+    goto(start.x, start.y)
+    down()
+    begin_fill()
 
-def triangle(start, end):
+    for count in range(2):
+        forward(end.x - start.x)
+        height = (end.x - start.x)/2
+        left(90)
+        forward(height)
+        left(90)
+    
+    end_fill()
+
+
+def equilateral_triangle(start, end):
     "Draw triangle from start to end."
     up()
     goto(start.x, start.y)
     down()
     begin_fill()
+<<<<<<< HEAD
     for count in range(2):
         forward(end.x - start.x)
         left(120)
     end_fill()
+=======
+
+    for count in range(3):
+        forward(end.x - start.x)
+        left(120)
+    
+    end_fill()
+
+>>>>>>> origin/AlexJuarez
 
 def tap(x, y):
     "Store starting point or draw shape."
@@ -67,15 +100,18 @@ def tap(x, y):
 
     if start is None:
         state['start'] = vector(x, y)
+
     else:
         shape = state['shape']
         end = vector(x, y)
         shape(start, end)
         state['start'] = None
 
+
 def store(key, value):
     "Store value in state at key."
     state[key] = value
+
 
 state = {'start': None, 'shape': line}
 setup(420, 420, 370, 0)
@@ -87,9 +123,10 @@ onkey(lambda: color('white'), 'W')
 onkey(lambda: color('green'), 'G')
 onkey(lambda: color('blue'), 'B')
 onkey(lambda: color('red'), 'R')
+onkey(lambda: color('purple'), 'M')
 onkey(lambda: store('shape', line), 'l')
 onkey(lambda: store('shape', square), 's')
 onkey(lambda: store('shape', circle), 'c')
 onkey(lambda: store('shape', rectangle), 'r')
-onkey(lambda: store('shape', triangle), 't')
+onkey(lambda: store('shape', equilateral_triangle), 't')
 done()
