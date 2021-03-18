@@ -10,8 +10,10 @@ Exercises
 
 """
 
-from turtle import *
+from turtle import up, goto, down, begin_fill, forward, end_fill, \
+     left, onscreenclick, onkey, undo, setup, listen, color, done
 from freegames import vector
+
 
 def line(start, end):
     "Draw line from start to end."
@@ -47,6 +49,7 @@ def circle(start, end):
         left(50)
     end_fill()
 
+
 def rectangle(start, end):
     "Draw rectangle from start to end."
     up()
@@ -60,7 +63,6 @@ def rectangle(start, end):
         left(90)
         forward(height)
         left(90)
-    
     end_fill()
 
 
@@ -74,7 +76,6 @@ def equilateral_triangle(start, end):
     for count in range(3):
         forward(end.x - start.x)
         left(120)
-    
     end_fill()
 
 
