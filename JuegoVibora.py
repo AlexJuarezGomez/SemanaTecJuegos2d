@@ -11,7 +11,7 @@ Exercises
 
 from turtle import update, clear, setup, hideturtle, \
     tracer, onkey, done, listen, ontimer
-from random import randint
+from random import randint, randrange
 from freegames import square, vector
 
 food = vector(0, 0)
