@@ -10,7 +10,7 @@ Exercises
 """
 
 from turtle import *
-from random import randrange
+from random import randrange, randint
 from freegames import square, vector
 
 food = vector(0, 0)
@@ -40,12 +40,34 @@ def move():
 
     if head == food:
         print('Snake:', len(snake))
-        food.x = randrange(-15, 15) * 10
-        food.y = randrange(-15, 15) * 10
+        rand_num = randint(0,10)
+
+        if 0 <= rand_num <= 2:
+            food.x = (food.x + 10)
+            food.y = (food.y + 10)
+
+        elif 3 <= rand_num <= 5:
+            food.x = (food.x - 10)
+            food.y = (food.y - 10)
+
+        elif 6 <= rand_num <= 8:
+            food.x = (food.x + 10)
+            food.y = (food.y - 10)
+
+        elif 9 <= rand_num <= 10:
+            food.x = (food.x - 10)
+            food.y = (food.y + 10)
+
+        if food.x >= 150 or food.y >= 150 or food.x <= -150 or food.y <= -150:
+            food.x = 0
+            food.y = 0
+
     else:
         snake.pop(0)
 
+
     clear()
+
 
     for body in snake:
         square(body.x, body.y, 9, 'black')
