@@ -10,8 +10,10 @@ Exercises
 
 """
 
-from turtle import *
+from turtle import up, goto, down, begin_fill, forward, end_fill, \
+     left, onscreenclick, onkey, undo, setup, listen, color, done
 from freegames import vector
+
 
 def line(start, end):
     "Draw line from start to end."
@@ -39,11 +41,22 @@ def circle(start, end):
     "Draw circle from start to end."
     up()
     goto(start.x, start.y)
+<<<<<<< HEAD
     forward(end.x - start.x)
     down()
     turtle.circle(end.x - start.x)
     begin_fill()
     end_fill()
+=======
+    down()
+    begin_fill()
+    for count in range(150):
+        forward(end.x - start.x)
+        left(45)
+        left(50)
+    end_fill()
+
+>>>>>>> c917397242049962a568b96d022ff24a1a1bb188
 
 def rectangle(start, end):
     "Draw rectangle from start to end."
@@ -51,6 +64,7 @@ def rectangle(start, end):
     goto(start.x, start.y)
     down()
     begin_fill()
+<<<<<<< HEAD
 
     for count in range(2):
         forward(end.x - start.x)
@@ -61,6 +75,17 @@ def rectangle(start, end):
     
     end_fill()
 
+=======
+
+    for count in range(2):
+        forward(end.x - start.x)
+        height = (end.x - start.x)/2
+        left(90)
+        forward(height)
+        left(90)
+    end_fill()
+
+>>>>>>> c917397242049962a568b96d022ff24a1a1bb188
 
 def equilateral_triangle(start, end):
     "Draw triangle from start to end."
@@ -72,7 +97,10 @@ def equilateral_triangle(start, end):
     for count in range(3):
         forward(end.x - start.x)
         left(120)
+<<<<<<< HEAD
     
+=======
+>>>>>>> c917397242049962a568b96d022ff24a1a1bb188
     end_fill()
 
 
@@ -111,4 +139,8 @@ onkey(lambda: store('shape', square), 's')
 onkey(lambda: store('shape', circle), 'c')
 onkey(lambda: store('shape', rectangle), 'r')
 onkey(lambda: store('shape', equilateral_triangle), 't')
+<<<<<<< HEAD
 done()
+=======
+done()
+>>>>>>> c917397242049962a568b96d022ff24a1a1bb188
