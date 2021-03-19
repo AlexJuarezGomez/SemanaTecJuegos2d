@@ -11,16 +11,18 @@ Exercises
 
 from turtle import update, clear, setup, hideturtle, \
     tracer, onkey, done, listen, ontimer
-from random import randint, randrange
+from random import randint, randrange, choice
 from freegames import square, vector
 
 food = vector(0, 0)
 snake = [vector(10, 0)]
 aim = vector(0, -10)
-mylist= ["black","blue","green","purple","yellow"]
-color = random.choice(mylist)
-mylist2=["orange","grey","brown","pink"]
-color2 = random.choice(mylist2)
+mylist = ["black", "blue", "green", "purple", "yellow"]
+color = choice(mylist)
+mylist2 = ["orange", "grey", "brown", "pink"]
+color2 = choice(mylist2)
+
+
 def change(x, y):
     "Change snake direction."
     aim.x = x
