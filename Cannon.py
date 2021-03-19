@@ -15,7 +15,7 @@ from turtle import clear, goto, dot, update, ontimer, setup, \
 from freegames import vector
 
 ball = vector(-200, -200)
-speed = vector(100,100)
+speed = vector(100, 100)
 targets = []
 
 
