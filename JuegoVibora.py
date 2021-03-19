@@ -59,8 +59,8 @@ def move():
             food.y = (food.y + 10)
 
         if food.x >= 150 or food.y >= 150 or food.x <= -150 or food.y <= -150:
-            food.x = 0
-            food.y = 0
+            food.x = randrange(-15, 15) * 10
+            food.y = randrange(-15, 15) * 10
 
     else:
         snake.pop(0)

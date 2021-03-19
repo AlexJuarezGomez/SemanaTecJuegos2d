@@ -2,7 +2,7 @@
 =======
 <<<<<<< HEAD
 =======
->>>>>>> c917397242049962a568b96d022ff24a1a1bb188
+>>>>>>> c917397242049962a568b96d022ff24a1a1bb18
 """Cannon, hitting targets with projectiles.
 
 Exercises
