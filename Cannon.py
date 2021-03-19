@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 """Cannon, hitting targets with projectiles.
 
 Exercises
@@ -11,7 +9,6 @@ Exercises
 
 """
 
->>>>>>> origin/AlexJuarez
 from random import randrange
 from turtle import *
 from freegames import vector
@@ -68,10 +65,6 @@ def move():
             targets.append(target)
 
     draw()
-
-    for target in targets:
-        if not inside(target):
-            return
 
     ontimer(move, 50)
 
