@@ -23,7 +23,12 @@ ghosts = [
     [vector(-180, 160), vector(5, 0)],
     [vector(-180, -160), vector(0, 5)],
     [vector(100, 160), vector(0, -5)],
+<<<<<<< HEAD
     [vector(100, -180), vector(-5, 0)],
+=======
+    [vector(100, -160), vector(-5, 0)],
+    [vector(-120, -160), vector(0, 5)]
+>>>>>>> tadeo/pacman
 ]
 tiles = [
     0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
@@ -126,12 +131,14 @@ def move():
     for point, course in ghosts:
         if valid(point + course):
             point.move(course)
+        elif valid(point + aim):
+            point.move(aim)
         else:
             options = [
-                vector(5, 0),
-                vector(-5, 0),
-                vector(0, 5),
-                vector(0, -5),
+                vector(15, 0),
+                vector(-15, 0),
+                vector(0, 15),
+                vector(0, -15),
             ]
             plan = choice(options)
             course.x = plan.x
