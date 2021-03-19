@@ -23,12 +23,8 @@ ghosts = [
     [vector(-180, 160), vector(5, 0)],
     [vector(-180, -160), vector(0, 5)],
     [vector(100, 160), vector(0, -5)],
-<<<<<<< HEAD
-    [vector(100, -180), vector(-5, 0)],
-=======
     [vector(100, -160), vector(-5, 0)],
     [vector(-120, -160), vector(0, 5)]
->>>>>>> tadeo/pacman
 ]
 tiles = [
     0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
